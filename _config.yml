@@ -1,5 +1,5 @@
 title: Project name
 description: Documentation for the project.
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-midnight
