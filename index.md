@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## [Project name] Portfolio
 
 You can use the [editor on GitHub](https://github.com/nadir121/DDD_Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
