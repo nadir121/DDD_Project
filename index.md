@@ -7,6 +7,7 @@ This is a placeholder for the DDD_project portfolio
 {% include googleDrivePlayer.html id=page.driveId %}
 
 ### Section
+
 Cool section
 
 ### Some code
