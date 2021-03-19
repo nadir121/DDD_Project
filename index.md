@@ -4,7 +4,7 @@ driveId: 1CSHSDAfjPdtZxtdo-s5TLOHkrdf0_lPr/preview
 This is a placeholder for the DDD_project portfolio
 
 ### Introduction Video
-{% include googleDrivePlayer.html id=page.driveId %}
+% include googleDrivePlayer.html id=page.driveId %
 
 ### Section
 
