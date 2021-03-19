@@ -1,6 +1,10 @@
+driveId: 1CSHSDAfjPdtZxtdo-s5TLOHkrdf0_lPr
 ## [Project name] Portfolio
 
 This is a placeholder for the DDD_project portfolio
+
+### Introduction Video
+{% include googleDrivePlayer.html id=page.driveId %}
 
 ### Section
 Cool section
