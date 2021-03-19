@@ -8,7 +8,7 @@ This is a placeholder for the DDD_project portfolio
 
 ### Section
 
-Cool section
+A Cool section
 
 ### Some code
 
