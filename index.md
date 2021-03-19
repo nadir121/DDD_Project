@@ -1,4 +1,3 @@
-driveId: 1CSHSDAfjPdtZxtdo-s5TLOHkrdf0_lPr/preview
 youtubeId: DiYDuW4dCTw
 ## [Project name] Portfolio
 
