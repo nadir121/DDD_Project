@@ -15,6 +15,7 @@ Making a new index:
 PUT stonks
 GET /_cat/indices
 ```
+Output:
 ```
 green  open .kibana_task_manager_7.12.0_001 zXjPLXD6ROupehe-p8WEbg 1 0  9 5709 742.5kb 742.5kb
 green  open .apm-custom-link                yHrvPT3_S7OywNkg43RWzQ 1 0  0    0    208b    208b
@@ -25,9 +26,8 @@ green  open .kibana-event-log-7.12.0-000001 dc-tX00VSyu_RTvGGalTIw 1 0  6    0  
 green  open .tasks                          fp4g582uRnW47s-Fxh3fvQ 1 0  6    0  40.7kb  40.7kb
 ```
 
-```
-```
-Filling the data:
+
+### Filling the data:
 ```
 POST _bulk
 { "index" : { "_index" : "stonks", "_id" : "1" } }
@@ -37,6 +37,7 @@ POST _bulk
 { "index" : { "_index" : "stonks", "_id" : "3" } }
 {"id":3,"stonk":"AMC", "name":"AMC Entertainment Holdings","site":"https://www.amctheatres.com/","market":"NYSE","price":10.94,"date":"26/03/2021","sentiment":"Neutral","sentiment_value":0.5,"mentions":30}
 ```
+Output:
 ```
 {
   "took" : 30,
@@ -97,7 +98,7 @@ POST _bulk
 }
 
 ```
-Match query examples:
+### Match query examples:
 ```
 POST stonks/_search
 {
@@ -110,6 +111,7 @@ POST stonks/_search
   }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -149,6 +151,7 @@ POST stonks/_search
   }
 }
 ```
+
 ```
 POST stonks/_search
 {
@@ -162,6 +165,7 @@ POST stonks/_search
   }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -201,6 +205,7 @@ POST stonks/_search
   }
 }
 ```
+
 ```
 POST stonks/_search
 {
@@ -214,6 +219,7 @@ POST stonks/_search
   }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -254,7 +260,7 @@ POST stonks/_search
 }
 ```
 
-Term query examples:
+### Term query examples:
 ```
 POST stonks/_search
 {
@@ -265,6 +271,7 @@ POST stonks/_search
   }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -304,6 +311,7 @@ POST stonks/_search
   }
 }
 ```
+
 ```
 POST stonks/_search
 {
@@ -317,6 +325,7 @@ POST stonks/_search
   }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -375,7 +384,7 @@ POST stonks/_search
 }
 ```
 
-Adding a new stonk:
+### Adding a new stonk:
 ```
 PUT stonks/_doc/4
 {
@@ -388,6 +397,7 @@ PUT stonks/_doc/4
   "date":"26/03/2021"
 }
 ```
+Output:
 ```
 {
   "_index" : "stonks",
@@ -404,7 +414,8 @@ PUT stonks/_doc/4
   "_primary_term" : 1
 }
 ```
-Update stonk prices:
+
+### Update stonk prices:
 ```
 POST stonks/_update/1
 {
@@ -413,6 +424,7 @@ POST stonks/_update/1
   }
 }
 ```
+Output:
 ```
 {
   "_index" : "stonks",
@@ -429,6 +441,7 @@ POST stonks/_update/1
   "_primary_term" : 1
 }
 ```
+
 ```
 POST stonks/_search
 {
@@ -441,6 +454,7 @@ POST stonks/_search
   }
 }
 ```
+Output:
 ```
 {
   "took" : 651,
@@ -489,6 +503,7 @@ POST stonks/_update/2
   }
 }
 ```
+Output:
 ```
 {
   "_index" : "stonks",
@@ -505,6 +520,20 @@ POST stonks/_update/2
   "_primary_term" : 1
 }
 ```
+
+```
+POST stonks/_search
+{
+  "query": {
+    "match": {
+      "id": {
+        "query" : 2
+      }
+    }
+  }
+}
+```
+Output:
 ```
 {
   "took" : 863,
@@ -545,7 +574,7 @@ POST stonks/_update/2
 }
 ```
 
-Exists query examples:
+### Exists query examples:
 ```
 GET stonks/_search
 {
@@ -556,6 +585,7 @@ GET stonks/_search
     }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -630,8 +660,8 @@ GET stonks/_search
     ]
   }
 }
-
 ```
+
 ```
 GET stonks/_search
 {
@@ -647,8 +677,8 @@ GET stonks/_search
     }
   }
 }
-
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -684,10 +714,9 @@ GET stonks/_search
     ]
   }
 }
-
 ```
 
-Range query examples:
+### Range query examples:
 ```
 POST stonks/_search
 {
@@ -701,6 +730,7 @@ POST stonks/_search
     }
 }
 ```
+Output:
 ```
 {
   "took" : 0,
@@ -754,7 +784,6 @@ POST stonks/_search
     ]
   }
 }
-
 ```
 
 
